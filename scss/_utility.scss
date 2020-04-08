@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  // outline:1px solid #e0e0e0;
+}
+
+body {
+  background: hsl(218, 28%, 13%);
+  color: #fff;
+  line-height: 1.5;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+.row {
+  flex-direction: row;
+}
+.col {
+  flex-direction: column;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+li {
+  margin: 0.8rem;
+}
+
+.container {
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1440px;
+  overflow-x: hidden;
+  margin: auto;
+  overflow: hidden;
+}
+
+img {
+  object-fit: contain;
+  max-width: 100%;
+}
+
+.logo {
+  width: 180px;
+  object-fit: contain;
+}
+
+.grid {
+  display: grid;
+}
+
+.fab {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin: 0.8rem 0.5rem;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  padding: 0.7rem;
+  &:hover {
+    color: hsl(176, 68%, 64%);
+    border: 1px solid hsl(176, 68%, 64%);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 0.7rem;
+}
+.m-heading {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.s-heading {
+  font-size: 1.2rem;
+}
+%btn {
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 2rem;
+  border: none;
+  background-image: linear-gradient(
+    to right,
+    hsl(176, 68%, 64%),
+    hsl(198, 60%, 50%)
+  );
+  color: #fff;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.9;
+  }
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
