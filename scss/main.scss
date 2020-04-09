@@ -146,6 +146,7 @@
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
+
   }
   .testimonial {
     text-align: left;
@@ -153,8 +154,19 @@
     padding: 1.5rem;
     // margin: 2rem 3rem;
     margin: 1rem;
+    margin-top: 5rem;
     width: 360px;
     border-radius: 0.2rem;
+    &:first-of-type{
+      position: relative;
+    }
+    &:first-of-type::before{
+      content: url('../images/bg-quotes.png');
+      position: absolute;
+      top:-17%;
+      left:-3%;
+      z-index: -1;
+    }
     &__img {
       width: 2.5rem;
       height: 2.5rem;
