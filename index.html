@@ -9,16 +9,17 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/main.css" />
-    <script
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <!-- <script
       src="https://kit.fontawesome.com/c60f73f892.js"
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
   </head>
   <body>
     <nav class="nav flex" id="nav">
       <div class="container flex row">
         <img src="images/logo.svg" alt="" class="nav__logo logo" />
-        <button class="hamburger" id="hamburger"><i class="fas fa-bars fa-2x"></i></button>
+        <button class="hamburger" id="hamburger" aria-label="Hamburger menu"><i class="fas fa-bars fa-2x"></i></button>
         <ul class="nav__list flex row" id="nav-ul">
           <li class="nav__list-item">
             <a href="#" class="nav__link">Features</a>
@@ -193,7 +194,7 @@
                 <h2 class="m-heading early__title">Get early access today</h2>
                 <p class="early__desc">It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.</p>
                 <form class="early__form flex row">
-                    <input type="email" name="email" id="email-id" placeholder="email@example.com" />
+                    <input type="email" name="email" id="email-id" aria-label="email" placeholder="email@example.com" />
                     <button class="early__btn">Get Started For Free</button>
                 </form>
             </div>
@@ -232,18 +233,27 @@
           <li><a href="#" class="footer__link">Privacy</a></li>
         </ul>
         <div class="footer__social flex ">
-          <a class="footer__link" href="http://facebook.com" target="_blank"
+          <a class="footer__link" href="http://facebook.com" aria-label="facebook" target="_blank"
             ><i class="fab fa-facebook-f"></i
           ></a>
-          <a class="footer__link" href="https://twitter.com" target="_blank"
+          <a class="footer__link" href="https://twitter.com" arai-label="twitter" target="_blank"
             ><i class="fab fa-twitter"></i
           ></a>
-          <a class="footer__link" href="https://instagram.com" target="_blank"
+          <a class="footer__link" href="https://instagram.com" aria-label="instagram" target="_blank"
             ><i class="fab fa-instagram"></i
           ></a>
         </div>
       </div>
     </footer>
     <script src="js/app.js" defer></script>
+    <script>
+      if('serviceWorker' in navigator){
+        navigator.serviceWorker.register('./sw.js',{scope:'/'}).then((reg)=>{
+          console.log(`Service Worker is registred`)
+        }).catch((error)=>{
+          console.log(`Registration failed with ${error}`)
+        })
+      }
+    </script>
   </body>
 </html>
